@@ -36,13 +36,25 @@ class Generateur {
 }
 
 const generateur = new Generateur;
+
 let numberUser;
 function numberReturn() {
-numberUser = document.getElementById("quote-number").value;
+	numberUser = document.getElementById("quote-number").value;
+}
+
+document.getElementById("checkbox_generator").style.display="none";
+
+function display_numberUser() {
+	document.getElementById("display_number").style.display="none";
+	document.getElementById("checkbox_generator").style.display="block";
 }
 
 
-
+function display_end() {
+	document.getElementById("checkbox_generator").style.display="none";
+	    document.getElementById("quote").insertAdjacentHTML("beforeEnd", 
+	    	'<br/><input type="button" onclick="document.location.reload(false)" value="Recommencer"/>');
+}
 
 
 document.getElementById("type1").addEventListener("change", function (e) {
@@ -56,8 +68,7 @@ document.getElementById("type1").addEventListener("change", function (e) {
 	} else {
 	    	console.log("Choississez un générateur");
 	    }
-	    
-	    document.getElementById("quote").insertAdjacentHTML("beforeEnd", '<br/><input type="submit" value="Recommencer">');
+	    display_end();
 });
 
 document.getElementById("type2").addEventListener("change", function (e) {
@@ -70,6 +81,7 @@ document.getElementById("type2").addEventListener("change", function (e) {
 	} else {
 	    	console.log("Choississez un générateur");
 	    }
+	    display_end();
 });
 
 
