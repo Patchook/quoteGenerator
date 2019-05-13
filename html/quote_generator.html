@@ -3,15 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Générateur de citation</title>
+
 </head>
 <body>
 	<h1>Bienvenue sur QuoteGenerator</h1>
 	<form>
     <label for="quote-number">Combien de citations souhaitez-vous générer ? (1 à 5)</label> :
-	<input type="text" name="quote-number" id="quote-number" value="3" required>
+	<input type="text" name="quote-number" id="quote-number"  required>
 	<span id=""></span>
-	<input type="submit" value="Envoyer">
-    <input type="reset" value="Annuler">
+	<input type="button" value="Envoyer" onClick="numberReturn();">
 	<p>
         <input type="radio" name="type" id="type1" value="type1">
         <label for="type1">Générateur 1</label>

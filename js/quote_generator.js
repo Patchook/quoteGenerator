@@ -36,7 +36,12 @@ class Generateur {
 }
 
 const generateur = new Generateur;
-let numberUser = document.getElementById("quote-number").value;
+let numberUser;
+function numberReturn() {
+numberUser = document.getElementById("quote-number").value;
+}
+
+
 
 
 
@@ -46,10 +51,13 @@ document.getElementById("type1").addEventListener("change", function (e) {
     		let quoteElt = document.createElement("li");
     		quoteElt.textContent = generateur.type1();
     		document.getElementById("quote").appendChild(quoteElt);
+    		
     	} 	
 	} else {
 	    	console.log("Choississez un générateur");
 	    }
+	    
+	    document.getElementById("quote").insertAdjacentHTML("beforeEnd", '<br/><input type="submit" value="Recommencer">');
 });
 
 document.getElementById("type2").addEventListener("change", function (e) {
