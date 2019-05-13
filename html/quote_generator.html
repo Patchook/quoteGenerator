@@ -7,6 +7,11 @@
 <body>
 	<h1>Bienvenue sur QuoteGenerator</h1>
 	<form>
+    <label for="quote-number">Combien de citations souhaitez-vous générer ? (1 à 5)</label> :
+	<input type="text" name="quote-number" id="quote-number" value="3" required>
+	<span id=""></span>
+	<input type="submit" value="Envoyer">
+    <input type="reset" value="Annuler">
 	<p>
         <input type="radio" name="type" id="type1" value="type1">
         <label for="type1">Générateur 1</label>
@@ -14,12 +19,8 @@
         <input type="radio" name="type" id="type2" value="type2">
         <label for="type2">Générateur 2</label>
     </p>
-    <label for="quote-number">Combien de citations souhaitez-vous générer ? (1 à 5)</label> :
-	<input type="text" name="quote-number" id="quote-number" required>
-	<span id=""></span>
-	<input type="submit" value="Envoyer">
-    <input type="reset" value="Annuler">
 	</form>
+	<ul id="quote"></ul>
 	<script type="text/javascript" src="../js/quote_generator.js"></script>
 </body>
 </html>
