@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Générateur de citation</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<h1>Bienvenue sur QuoteGenerator</h1>
+	<form>
+	<div id="display_number">
+	    <label for="quote-number">Combien de citations souhaitez-vous générer ? (1 à 5)</label> :
+		<input type="text" name="quote-number" id="quote-number">
+		<span id=""></span>
+		<input type="button" value="Valider" id="valider">
+	</div>
+	
+	<div id="checkbox_generator">
+		<p>Choississez un générateur :</p>
+        <input type="radio" name="type" id="type1" value="type1">
+        <label for="type1">Générateur 1</label>
+        <br>
+        <input type="radio" name="type" id="type2" value="type2">
+        <label for="type2">Générateur 2</label>
+    </div>
+    
+	</form>
+	<ul id="quote"></ul>
+	<script type="text/javascript" src="js/generateur.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
