@@ -1,6 +1,6 @@
 class Generateur { 	
 	constructor(numberUser) {
-		this.numberUser = 0;
+		this.numberUser = 1;
 	}
 
 	randomItem(items)           // Item aléatoire

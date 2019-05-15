@@ -2,31 +2,38 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Générateur de citation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Quotor</title>
 </head>
 <body>
-	<h1>Bienvenue sur QuoteGenerator</h1>
-	<form>
-	<div id="display_number">
-	    <label for="quote-number">Combien de citations souhaitez-vous générer ? (1 à 5)</label> :
-		<input type="text" name="quote-number" id="quote-number">
-		<span id=""></span>
-		<input type="button" value="Valider" id="valider">
+	<div class="container-fluid">
+		<div class="container">
+			<h1>Bienvenue sur Quotor</h1>
+			
+			<div id="display_number">
+			    <label for="quote-number">Combien de citations souhaitez-vous générer ? (1 à 5)</label> :
+				<input type="text" name="quote-number" id="quote-number">
+				<span id="condition"></span>
+				<input type="button" value="Valider" id="valider">
+			</div>
+			
+			<div id="checkbox_generator">
+				<p>Choississez un générateur :</p>
+		        <input type="radio" name="type" id="type1" value="type1">
+		        <label for="type1">Générateur 1</label>
+		        <br>
+		        <input type="radio" name="type" id="type2" value="type2">
+		        <label for="type2">Générateur 2</label>
+		    </div>
+			<ul id="quote"></ul>
+		</div>
 	</div>
-	
-	<div id="checkbox_generator">
-		<p>Choississez un générateur :</p>
-        <input type="radio" name="type" id="type1" value="type1">
-        <label for="type1">Générateur 1</label>
-        <br>
-        <input type="radio" name="type" id="type2" value="type2">
-        <label for="type2">Générateur 2</label>
-    </div>
-    
-	</form>
-	<ul id="quote"></ul>
 	<script type="text/javascript" src="js/generateur.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
